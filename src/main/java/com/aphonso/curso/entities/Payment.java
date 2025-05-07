@@ -4,11 +4,6 @@ import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
 
-import com.aphonso.curso.entities.pk.PaymentPK;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonProperty.Access;
-
-import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,10 +20,6 @@ public class Payment implements Serializable{
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-//	@EmbeddedId
-//	@JsonProperty(access = Access.WRITE_ONLY)
-//	private PaymentPK id = new PaymentPK();
 	
 	private Instant moment;
 	
